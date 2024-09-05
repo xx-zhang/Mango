@@ -1,0 +1,44 @@
+version: '3.1'
+
+services:
+
+  mango-mysql:
+    image: mysql:5.7.24
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: Aa123123
+    ports:
+      - "3306"
+    healthcheck:
+      test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
+      timeout: 20s
+      retries: 10
+    networks:
+      mango-net:
+        ipv4_address: 192.168.177.33
+
+  mango-service:
+    build: service/guess
+    image: actanble/mango-service
+    depends_on:
+      mango-mysql:
+        condition: service_healthy
+    environment:
+      JAVA_OPTS: >
+        -Xss512k
+        -XX:MaxRAM=260m
+        -Dspring.profiles.active=local
+        -Dspring.datasource.password=Aa123123
+        -Dcore.url.db-mysql=jdbc:mysql://mango-mysql/mango?allowPublicKeyRetrieval=true&useSSL=false
+    ports:
+      - "8080:8080"
+    networks:
+      mango-net:
+        ipv4_address: 192.168.177.55
+      
+networks:
+  mango-net:
+    ipam:
+      config:
+      - subnet: 192.168.177.0/24

@@ -1,2 +1,195 @@
-./backend/target/
+build
+*.o
+./d1
+test
+example
+*.elf
 
+./backend/target 
+target
+
+
+__pycache__
+*/__pycache__/*
+
+# *.json
+/data/temp/*.json
+/data/asserts/*.json
+asserts*
+/useful-info/datas/cs110*
+################################
+###########  CUSTOM  ############
+################################
+build_deps_copy
+
+################################
+###########  FILES  ############
+################################
+*.pptx
+*.pdf
+
+################################
+########### FOLDERS ############
+################################
+build/
+html/
+
+################################
+############ C/C++ #############
+################################
+# Prerequisites
+*.d
+!ssh_config.d
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+*.ko
+*.elf
+# Precompiled Headers
+*.gch
+*.pch
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+# Fortran module files
+*.mod
+*.smod
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+# Executables
+*.i*86
+*.x86_64
+*.hex
+*.app
+*.stackdump
+*.exe
+*.out
+# Linker output
+*.ilk
+*.map
+*.exp
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+################################
+########### VS CODE ############
+################################
+# .vscode
+*.code-workspace
+.history
+
+################################
+###########   VS    ############
+################################
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
+
+# Mono auto generated files
+mono_crash.*
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Files built by Visual Studio
+*_i.c
+*_p.c
+*_h.h
+*.meta
+*.iobj
+*.ipdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*_wpftmp.csproj
+*.log
+*.tlog
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+# Chutzpah Test files
+_Chutzpah*
+
+# Visual C++ cache files
+ipch/
+*.aps
+*.ncb
+*.opendb
+*.opensdf
+*.sdf
+*.cachefile
+*.VC.db
+*.VC.VC.opendb
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+# Visual Studio Trace Files
+*.e2e
+
+
+# geoipdata 
+./useful-info/datas/geodata/*.dat
+useful-info/datas/geodata/*.dat
+
+rpc_data/
+./src/core/brpc_demo/rpc_data
+echo_server
+echo_client 
+
+
+*.dat 
+
+*/build/
+*/.cache/
+
+/.cache
+
+
+thirty_lib
+
+# 加白上传
+!src/third_party/libdockdb/libduckdb_static.a
+!src/third_party/libdockdb/libduckdb.so
